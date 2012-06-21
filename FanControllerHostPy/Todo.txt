@@ -1,0 +1,5 @@
+Todo:
+[X] Read HDD array temperatures every 1 minute
+[X] Output temperatures via serial to the Fan Controller
+[ ] Check for ACK of comms, otherwise email server admin that the fan controller might not be working
+[ ] Email server admin if HDD temps rise above 40C

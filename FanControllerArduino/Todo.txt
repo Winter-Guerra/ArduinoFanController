@@ -1,0 +1,17 @@
+Version 1 of the Arduino fan controller
+The communication protocol is largely finished and currently exists in a working state. Although the Arduino's code should be objectized (turned into cpp code),
+it works fine as it is now.
+
+Version log:
+    [~] Impliment a packaging system that can reliably receive data without receiving wrong data due to comm noise
+    -[X] Recognize packet headers
+    -[ ] Timeout unfinished packets
+    -[ ] Do packet checksumming
+    -[X] Do packet specific sanity checking
+    -[ ] Send packet specific (addressed) ACKs to the host on successful receipt of packet
+  ->[ ] Decrease power usage between serial data and PWM pulses by utilizing the Atmel sleep function
+  ->[ ] Impliment the communication timeout failsafe. After 2 minutes of no comms, the Atmel should set all fans to highest velocity.
+    [X] Set fans to values recieved via serial from host
+    [ ] Enable onboard PID controlling
+    -[ ] Create commands that allow for PID settings to be setup from host
+    -[ ] Save the received PID values in EEPROM and read on boot
